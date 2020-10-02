@@ -167,9 +167,27 @@ console.log("Today is:", WhatDayIsIt(today), "day");
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
 */
 
+let today1 = new Date();
+
+const HowManyDays = (today1) => "Day:"+ today1.getDate() + "Month:"+ (today1.getMonth() +1);
+
+console.log("Today is:", HowManyDays(today1)); //COULD NOT FIGURE OUT HOW TO CALCULATE DAYS 
+
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
+
+let today2 = new Date();
+let myBirthday = new Date('1979-02-26');
+
+    const IsTodayMyBDay = (today2) => {
+      if (myBirthday === today2){ 
+        return true
+      } else {
+        return false
+      }  
+    }
+console.log (IsTodayMyBDay(today2));
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
