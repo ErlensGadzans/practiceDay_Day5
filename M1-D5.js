@@ -129,10 +129,30 @@ const OnlyLetters = (removeNumbers) => removeNumbers.replace(removeNumbers, remo
 /* Ex.6 
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
+let emailExample = "john@john.com";
+//const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+const reg = /^[A-Z0-9_'%=+!`#~$*?^{}&|-]+([\.][A-Z0-9_'%=+!`#~$*?^{}&|-]+)*@[A-Z0-9-]+(\.[A-Z0-9-]+)+$/i; 
+
+const IsThisAnEmail = (emailExample) => {
+      if (reg.test (emailExample) === false) {
+        return false;
+      }
+     // alert('Invalid Email Address');
+ else {
+      return true;
+}
+}
+  console.log("Email example is:", IsThisAnEmail(emailExample));
 
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
 */
+let today = new Date();
+
+const WhatDayIsIt = (today) => today.getDay();
+
+console.log("Today is:", WhatDayIsIt(today), "day");
+
 
 /* Ex.8
     Write the function RollTheDices that receives a numeric input and returns an object that contains both the sum of the value of the dices and the dices itself
