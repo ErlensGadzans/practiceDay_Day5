@@ -84,11 +84,28 @@ console.log(Dice (4)); // I STILL DON'T UNDERSTAND HOW THIS FUNCTION WORKS
 /* Ex.2 
     Write the function WhoIsBigger that receives 2 numbers and returns the bigger of the 2
 */
+let numberOne = 2;
+let numberTwo = 7;
+
+const WhoIsBigger = (numberOne, numberTwo) => {
+  if (numberOne > numberTwo ){
+    return numberOne;
+  } else {
+    return numberTwo
+  }
+}
+  console.log ("Bigger number is:", WhoIsBigger(numberOne, numberTwo));
 
 /* Ex.3
     Write the function SplitMe that receives a String and returns an array with every word in that string
     Ex. SplitMe("I love coding") => returns [ "I","Love","Coding"]
 */
+let splitSentence = "I love coding";
+
+const SplitMe = (splitSentence) => splitSentence.split(" ");
+
+  console.log(SplitMe(splitSentence));
+
 
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
