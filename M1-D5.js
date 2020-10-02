@@ -111,10 +111,20 @@ const SplitMe = (splitSentence) => splitSentence.split(" ");
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
 */
 
+
 /* Ex.5
    Write the function OnlyLetters that receives a string, removes all the numbers and returns it.
    Ex.: OnlyLetters("I love 123 whatever")  => returns "I love whatever"
 */
+let removeNumbers = "I love 123 whatever";
+let removeNumbers1 = "I love whatever";
+
+//const OnlyLetters = (removeNumbers) => removeNumbers.substr(0,6) // THIS EXAMPLE DIDN'T WORK PROPERLY, SO I ADDED NEXT SOLUTION 
+
+const OnlyLetters = (removeNumbers) => removeNumbers.replace(removeNumbers, removeNumbers1);
+
+  console.log(OnlyLetters(removeNumbers));
+
 
 /* Ex.6 
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
